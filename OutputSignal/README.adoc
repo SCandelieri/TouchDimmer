@@ -1,0 +1,3 @@
+= OutputSignal Library for Arduino =
+
+The library offers easy control over a digital ouput signal.

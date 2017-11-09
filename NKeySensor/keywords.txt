@@ -1,0 +1,4 @@
+NKeySensor	KEYWORD1
+GetPins	KEYWORD2
+GetNumberOfPins	KEYWORD2
+GetPressedKey	KEYWORD2

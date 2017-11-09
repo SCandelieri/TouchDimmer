@@ -1,0 +1,3 @@
+= NKeySensor Library for Arduino =
+
+Library for controlling a n Key Detector.
