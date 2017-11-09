@@ -15,7 +15,8 @@ class OutputSignal
 		bool on;
 		int pin;
 		void Write();
-	
+		unsigned long Round(float number);
+
 	public:
 		OutputSignal(int pin);
 		bool IsOn();
@@ -23,6 +24,7 @@ class OutputSignal
 		int GetPin();
 		void Toggle();
 		void PWM(unsigned long ms, float dutyCycle);
+		void PWMMicroseconds(unsigned int us, float dutyCycle);
 };
 
 #endif

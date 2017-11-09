@@ -43,7 +43,22 @@ void OutputSignal::Toggle()
 void OutputSignal::PWM(unsigned long ms, float dutyCycle)
 {
 	this->SetOn(true);
-	delay(ms * dutyCycle);
+	delay(Round((float)ms * dutyCycle));
 	this->SetOn(false);
-	delay(ms * (1 - dutyCycle));
+	delay(Round((float)ms * (1.0f - dutyCycle)));
+}
+
+void OutputSignal::PWMMicroseconds(unsigned int us, float dutyCycle)
+{
+	this->SetOn(true);
+	delayMicroseconds(Round((float)us * dutyCycle));
+	this->SetOn(false);
+	delayMicroseconds(Round((float)us * (1.0f - dutyCycle)));
+}
+
+unsigned long OutputSignal::Round(float number)
+{
+	int integerPart = (int)number;
+	float decimalPart = number - integerPart;
+	return (decimalPart > 0.5f) ? (integerPart + 1) : integerPart;
 }
