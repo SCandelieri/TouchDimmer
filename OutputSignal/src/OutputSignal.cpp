@@ -60,5 +60,5 @@ unsigned long OutputSignal::Round(float number)
 {
 	int integerPart = (int)number;
 	float decimalPart = number - integerPart;
-	return (decimalPart > 0.5f) ? (integerPart + 1) : integerPart;
+	return (decimalPart < 0.5f) ? integerPart : (integerPart + 1);
 }
