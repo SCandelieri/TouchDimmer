@@ -6,7 +6,7 @@ OutputSignal lamp(12);
 NKeySensor key4TouchDetector(pins, sizeof(pins) / sizeof(pins[0]));
 int currentKey = -1;
 int selectedKey = 0;
-int period = 20;
+int period = 6;
 
 void setup()
 {
